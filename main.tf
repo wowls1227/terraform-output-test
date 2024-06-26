@@ -10,3 +10,14 @@ output "test3" {
 output "test4" {
   value = "test4"
 }
+resource "terraform_data" "test1" {
+  provisioner "local-exec" {
+     command = "packer --version"
+  }
+}
+
+resource "terraform_data" "test2" {
+  provisioner "local-exec" {
+     command = "awscli --version"
+  }
+}
