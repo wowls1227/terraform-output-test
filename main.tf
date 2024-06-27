@@ -18,6 +18,6 @@ resource "terraform_data" "test1" {
 
 resource "terraform_data" "test2" {
   provisioner "local-exec" {
-     command = "awscli --version"
+     command = "aws --version"
   }
 }
